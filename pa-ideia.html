@@ -1,0 +1,2427 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E40AF" />
+
+  <!-- SEO -->
+  <title>Academia Atlântica | Escola Profissional na Trofa com programas Erasmus+</title>
+  <meta name="description" content="Cursos profissionais de Nível IV na Trofa com componente internacional. Erasmus+ em 16 países parceiros. Candidaturas abertas para 2026/27." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://academia-atlantica.pt/" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="pt" href="https://academia-atlantica.pt/" />
+  <link rel="alternate" hreflang="en" href="https://academia-atlantica.pt/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://academia-atlantica.pt/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:title" content="Academia Atlântica — Escola Profissional com horizonte internacional" />
+  <meta property="og:description" content="Cursos de Nível IV + Erasmus+ em 16 países. Candidaturas 2026/27 abertas." />
+  <meta property="og:url" content="https://academia-atlantica.pt/" />
+  <meta property="og:image" content="https://academia-atlantica.pt/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Academia Atlântica" />
+  <meta name="twitter:description" content="Formação profissional com horizonte internacional. Erasmus+ em 16 países." />
+
+  <!-- Schema.org EducationalOrganization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Academia Atlântica",
+    "alternateName": "Academia Atlântica — Escola Profissional",
+    "url": "https://academia-atlantica.pt",
+    "logo": "https://academia-atlantica.pt/logo.png",
+    "foundingDate": "2008",
+    "description": "Escola profissional na Trofa com cursos de Nível IV e programa Erasmus+ em 16 países parceiros.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua da Educação, 100",
+      "addressLocality": "Trofa",
+      "postalCode": "4785-000",
+      "addressRegion": "Porto",
+      "addressCountry": "PT"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+351-252-000-000",
+      "contactType": "admissions",
+      "email": "candidaturas@academia-atlantica.pt",
+      "availableLanguage": ["Portuguese","English"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/academia.atlantica",
+      "https://www.linkedin.com/school/academia-atlantica",
+      "https://www.facebook.com/academia.atlantica"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <style>
+    /* =========================================================
+       :ROOT — DESIGN TOKENS
+       Quando chegar o rebrand: trocar APENAS este bloco + fonts.
+       ========================================================= */
+    :root {
+      /* --- BRAND COLORS --- */
+      --color-primary: #1E40AF;          /* Azul institucional */
+      --color-primary-hover: #1E3A8A;
+      --color-primary-soft: #DBEAFE;
+      --color-accent: #F97316;           /* Laranja quente */
+      --color-accent-hover: #EA580C;
+      --color-accent-soft: #FFEDD5;
+
+      /* --- SURFACES --- */
+      --color-bg: #FAFAFA;
+      --color-bg-alt: #F1F5F9;
+      --color-surface: #FFFFFF;
+      --color-surface-elevated: #FFFFFF;
+      --color-glass: rgba(255, 255, 255, 0.65);
+      --color-glass-strong: rgba(255, 255, 255, 0.82);
+      --color-glass-border: rgba(255, 255, 255, 0.5);
+      --color-overlay-dark: rgba(15, 23, 42, 0.55);
+
+      /* --- TEXT --- */
+      --color-text: #0F172A;
+      --color-text-soft: #334155;
+      --color-muted: #64748B;
+      --color-text-inverse: #FFFFFF;
+
+      /* --- BORDERS --- */
+      --color-border: #E2E8F0;
+      --color-border-strong: #CBD5E1;
+
+      /* --- STATUS --- */
+      --color-success: #16A34A;
+      --color-error: #DC2626;
+      --color-warning: #EAB308;
+
+      /* --- GRADIENTS --- */
+      --gradient-mesh:
+        radial-gradient(at 20% 20%, rgba(30, 64, 175, 0.22) 0%, transparent 55%),
+        radial-gradient(at 80% 30%, rgba(249, 115, 22, 0.18) 0%, transparent 55%),
+        radial-gradient(at 50% 90%, rgba(59, 130, 246, 0.14) 0%, transparent 55%);
+      --gradient-primary: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+      --gradient-accent: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+      --gradient-globe: radial-gradient(circle at 30% 30%, #60A5FA 0%, #1E40AF 50%, #0c1e5e 100%);
+
+      /* --- TYPOGRAPHY --- */
+      --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --fs-display: clamp(3rem, 7vw, 5.5rem);
+      --fs-h1: clamp(2.25rem, 5vw, 3.75rem);
+      --fs-h2: clamp(1.75rem, 3.5vw, 2.75rem);
+      --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
+      --fs-lead: clamp(1.0625rem, 1.5vw, 1.25rem);
+      --fs-body: 1rem;
+      --fs-small: 0.875rem;
+      --fs-xs: 0.75rem;
+
+      --fw-regular: 400;
+      --fw-medium: 500;
+      --fw-semibold: 600;
+      --fw-bold: 700;
+
+      --lh-tight: 1.1;
+      --lh-snug: 1.3;
+      --lh-normal: 1.55;
+      --lh-relaxed: 1.75;
+
+      --tracking-tight: -0.02em;
+      --tracking-normal: 0;
+      --tracking-wide: 0.04em;
+
+      /* --- SPACING --- */
+      --sp-1: 0.25rem;
+      --sp-2: 0.5rem;
+      --sp-3: 0.75rem;
+      --sp-4: 1rem;
+      --sp-5: 1.25rem;
+      --sp-6: 1.5rem;
+      --sp-8: 2rem;
+      --sp-10: 2.5rem;
+      --sp-12: 3rem;
+      --sp-16: 4rem;
+      --sp-20: 5rem;
+      --sp-24: 6rem;
+      --sp-32: 8rem;
+
+      /* --- LAYOUT --- */
+      --container-max: 1240px;
+      --container-narrow: 880px;
+      --container-padding: clamp(1rem, 4vw, 2rem);
+
+      /* --- RADIUS --- */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-2xl: 36px;
+      --radius-full: 9999px;
+
+      /* --- SHADOWS --- */
+      --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.12);
+      --shadow-xl: 0 28px 72px rgba(15, 23, 42, 0.16);
+      --shadow-glow-primary: 0 12px 40px rgba(30, 64, 175, 0.28);
+      --shadow-glow-accent: 0 12px 40px rgba(249, 115, 22, 0.28);
+
+      /* --- ANIMATION --- */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --dur-fast: 180ms;
+      --dur-normal: 320ms;
+      --dur-slow: 600ms;
+      --dur-slower: 1000ms;
+
+      /* --- Z-INDEX --- */
+      --z-base: 1;
+      --z-elevated: 10;
+      --z-sticky: 50;
+      --z-header: 100;
+      --z-overlay: 500;
+      --z-modal: 1000;
+    }
+
+    /* =========================================================
+       RESET + BASE
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: var(--fs-body);
+      line-height: var(--lh-normal);
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img, svg { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: var(--fw-semibold);
+      line-height: var(--lh-tight);
+      letter-spacing: var(--tracking-tight);
+      margin: 0;
+    }
+    p { margin: 0; }
+    ul, ol { margin: 0; padding: 0; list-style: none; }
+    input, textarea, select { font: inherit; color: inherit; }
+
+    :focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    /* =========================================================
+       LAYOUT UTILITIES
+       ========================================================= */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+    .container-narrow { max-width: var(--container-narrow); }
+    .section { padding: var(--sp-20) 0; }
+    @media (min-width: 768px) { .section { padding: var(--sp-24) 0; } }
+    .section-tight { padding: var(--sp-12) 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-primary);
+      padding: var(--sp-2) var(--sp-4);
+      background: var(--color-primary-soft);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--sp-6);
+    }
+
+    .section-title { font-size: var(--fs-h2); margin-bottom: var(--sp-4); }
+    .section-subtitle {
+      font-size: var(--fs-lead);
+      color: var(--color-muted);
+      max-width: 640px;
+      line-height: var(--lh-relaxed);
+    }
+    .section-header { margin-bottom: var(--sp-12); }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-2);
+      padding: var(--sp-3) var(--sp-6);
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-body);
+      border-radius: var(--radius-full);
+      transition: transform var(--dur-fast) var(--ease-out),
+                  box-shadow var(--dur-fast) var(--ease-out),
+                  background-color var(--dur-fast) var(--ease-out);
+      white-space: nowrap;
+      border: 2px solid transparent;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--gradient-accent);
+      color: var(--color-text-inverse);
+      box-shadow: var(--shadow-glow-accent);
+    }
+    .btn-primary:hover { box-shadow: 0 16px 48px rgba(249, 115, 22, 0.38); }
+
+    .btn-secondary {
+      background: var(--color-surface);
+      color: var(--color-primary);
+      border-color: var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-secondary:hover { border-color: var(--color-primary); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-text);
+    }
+    .btn-ghost:hover { background: var(--color-bg-alt); }
+
+    .btn-lg { padding: var(--sp-4) var(--sp-8); font-size: 1.0625rem; }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: var(--z-header);
+      transition: background-color var(--dur-normal) var(--ease-smooth),
+                  backdrop-filter var(--dur-normal) var(--ease-smooth),
+                  box-shadow var(--dur-normal) var(--ease-smooth),
+                  padding var(--dur-normal) var(--ease-smooth);
+      padding: var(--sp-5) 0;
+    }
+    .header.scrolled {
+      background: var(--color-glass-strong);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      box-shadow: 0 1px 0 var(--color-border), var(--shadow-sm);
+      padding: var(--sp-3) 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-6);
+    }
+    .logo {
+      font-family: var(--font-display);
+      font-weight: var(--fw-bold);
+      font-size: 1.375rem;
+      color: var(--color-text);
+      letter-spacing: var(--tracking-tight);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-primary);
+      display: grid; place-items: center;
+      color: white;
+      font-family: var(--font-display);
+      font-weight: var(--fw-bold);
+      font-size: 1.1rem;
+    }
+    .nav {
+      display: none;
+      align-items: center;
+      gap: var(--sp-6);
+    }
+    @media (min-width: 960px) { .nav { display: flex; } }
+    .nav a {
+      font-weight: var(--fw-medium);
+      font-size: var(--fs-small);
+      color: var(--color-text-soft);
+      transition: color var(--dur-fast) var(--ease-out);
+      position: relative;
+    }
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px; left: 0; right: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--dur-normal) var(--ease-out);
+    }
+    .nav a:hover { color: var(--color-primary); }
+    .nav a:hover::after { transform: scaleX(1); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: inline-flex;
+      padding: 4px;
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-full);
+      position: relative;
+    }
+    .lang-toggle button {
+      padding: var(--sp-2) var(--sp-4);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-muted);
+      border-radius: var(--radius-full);
+      position: relative;
+      z-index: 2;
+      transition: color var(--dur-normal) var(--ease-smooth);
+    }
+    .lang-toggle button.active { color: var(--color-text-inverse); }
+    .lang-toggle-slider {
+      position: absolute;
+      top: 4px; left: 4px;
+      width: calc(50% - 4px);
+      bottom: 4px;
+      background: var(--color-primary);
+      border-radius: var(--radius-full);
+      transition: transform var(--dur-normal) var(--ease-bounce);
+      z-index: 1;
+    }
+    .lang-toggle[data-lang="en"] .lang-toggle-slider { transform: translateX(100%); }
+
+    /* Mobile menu */
+    .mobile-toggle {
+      display: grid; place-items: center;
+      width: 44px; height: 44px;
+      border-radius: var(--radius-md);
+      color: var(--color-text);
+    }
+    @media (min-width: 960px) { .mobile-toggle { display: none; } }
+    .mobile-menu {
+      position: fixed;
+      top: 0; right: 0;
+      width: min(360px, 88vw);
+      height: 100vh;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-xl);
+      padding: var(--sp-20) var(--sp-8) var(--sp-8);
+      z-index: var(--z-modal);
+      transform: translateX(100%);
+      transition: transform var(--dur-normal) var(--ease-smooth);
+      display: flex; flex-direction: column; gap: var(--sp-4);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a {
+      font-size: 1.125rem;
+      font-weight: var(--fw-medium);
+      padding: var(--sp-3) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .mobile-menu-close {
+      position: absolute;
+      top: var(--sp-6); right: var(--sp-6);
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+    }
+    .mobile-backdrop {
+      position: fixed; inset: 0;
+      background: var(--color-overlay-dark);
+      z-index: var(--z-overlay);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--dur-normal) var(--ease-smooth);
+    }
+    .mobile-backdrop.visible { opacity: 1; pointer-events: auto; }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: var(--sp-32) 0 var(--sp-20);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-mesh {
+      position: absolute; inset: 0;
+      background: var(--gradient-mesh), var(--color-bg);
+      z-index: -2;
+      animation: meshFloat 20s ease-in-out infinite alternate;
+    }
+    @keyframes meshFloat {
+      0%   { background-position: 0% 0%, 100% 0%, 50% 100%; }
+      100% { background-position: 10% 5%, 90% 10%, 60% 95%; }
+    }
+    .hero-blob {
+      position: absolute;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      z-index: -1;
+      animation: blobFloat 18s ease-in-out infinite;
+      will-change: transform;
+    }
+    .hero-blob-1 {
+      background: var(--color-primary);
+      top: -120px; right: -100px;
+    }
+    .hero-blob-2 {
+      background: var(--color-accent);
+      bottom: -160px; left: -120px;
+      animation-delay: -6s;
+    }
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33%      { transform: translate(40px, -30px) scale(1.05); }
+      66%      { transform: translate(-30px, 40px) scale(0.95); }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-12);
+      align-items: center;
+    }
+    @media (min-width: 960px) {
+      .hero-grid { grid-template-columns: 1.1fr 1fr; gap: var(--sp-16); }
+    }
+
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      padding: var(--sp-2) var(--sp-4);
+      background: var(--color-glass-strong);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--color-glass-border);
+      border-radius: var(--radius-full);
+      font-size: var(--fs-small);
+      font-weight: var(--fw-medium);
+      color: var(--color-text-soft);
+      margin-bottom: var(--sp-6);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--color-success);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+      50%      { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+    }
+    .hero h1 {
+      font-size: var(--fs-display);
+      margin-bottom: var(--sp-6);
+    }
+    .hero h1 .accent {
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-style: italic;
+      font-weight: var(--fw-medium);
+    }
+    .hero-lead {
+      font-size: var(--fs-lead);
+      color: var(--color-text-soft);
+      line-height: var(--lh-relaxed);
+      max-width: 540px;
+      margin-bottom: var(--sp-8);
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: var(--sp-4);
+      margin-bottom: var(--sp-10);
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+      padding-top: var(--sp-8);
+      border-top: 1px solid var(--color-border);
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: var(--fw-bold);
+      color: var(--color-primary);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: var(--fs-small);
+      color: var(--color-muted);
+      margin-top: var(--sp-1);
+    }
+
+    /* =========================================================
+       HERO — 3D GLOBE
+       ========================================================= */
+    .hero-visual {
+      position: relative;
+      aspect-ratio: 1;
+      max-width: 520px;
+      margin: 0 auto;
+      display: grid; place-items: center;
+    }
+    .globe-stage {
+      position: relative;
+      width: 100%; height: 100%;
+      perspective: 1200px;
+      transform-style: preserve-3d;
+    }
+    .globe {
+      position: absolute;
+      inset: 18%;
+      border-radius: 50%;
+      background: var(--gradient-globe);
+      box-shadow:
+        inset -20px -30px 80px rgba(0, 0, 0, 0.45),
+        inset 18px 18px 40px rgba(255, 255, 255, 0.12),
+        0 30px 80px rgba(30, 64, 175, 0.35);
+      animation: globeBreath 8s ease-in-out infinite;
+    }
+    @keyframes globeBreath {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.03); }
+    }
+    .globe::before, .globe::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      pointer-events: none;
+    }
+    .globe::before { transform: rotateX(60deg); }
+    .globe::after { transform: rotateY(60deg); }
+
+    /* Latitude/longitude grid using extra divs */
+    .globe-grid {
+      position: absolute; inset: 18%;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: gridSpin 40s linear infinite;
+    }
+    .globe-grid::before,
+    .globe-grid::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .globe-grid::before { transform: rotateX(30deg); }
+    .globe-grid::after { transform: rotateX(-30deg); }
+    @keyframes gridSpin {
+      to { transform: rotateZ(360deg); }
+    }
+
+    /* Orbit ring with country chips */
+    .orbit {
+      position: absolute;
+      inset: 0;
+      animation: orbitSpin 36s linear infinite;
+      transform-style: preserve-3d;
+    }
+    @keyframes orbitSpin { to { transform: rotate(360deg); } }
+    .orbit:hover, .orbit.paused { animation-play-state: paused; }
+
+    .country-pin {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 0; height: 0;
+    }
+    .country-pin .pin-dot {
+      position: absolute;
+      left: 50%;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25), 0 4px 12px rgba(249, 115, 22, 0.4);
+      transform: translate(-50%, -50%);
+      transition: transform var(--dur-normal) var(--ease-bounce);
+    }
+    .country-pin .pin-label {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -200%) rotate(var(--counter-rot, 0deg));
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      padding: var(--sp-1) var(--sp-3);
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--dur-normal) var(--ease-out), transform var(--dur-normal) var(--ease-out);
+    }
+    .country-pin:hover .pin-dot {
+      transform: translate(-50%, -50%) scale(1.4);
+      background: var(--color-text-inverse);
+      box-shadow: 0 0 0 4px var(--color-accent), 0 8px 20px rgba(249, 115, 22, 0.5);
+    }
+    .country-pin:hover .pin-label {
+      opacity: 1;
+      transform: translate(-50%, -240%) rotate(var(--counter-rot, 0deg));
+    }
+
+    /* =========================================================
+       SECTION: VALUE PROPS
+       ========================================================= */
+    .values {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--sp-8);
+    }
+    .value {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+    .value-icon {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-lg);
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      display: grid; place-items: center;
+    }
+    .value h3 { font-size: var(--fs-h3); }
+    .value p { color: var(--color-muted); line-height: var(--lh-relaxed); }
+
+    /* =========================================================
+       SECTION: COURSES
+       ========================================================= */
+    .courses-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+      margin-bottom: var(--sp-10);
+    }
+    .filter-chip {
+      padding: var(--sp-2) var(--sp-4);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--fs-small);
+      font-weight: var(--fw-medium);
+      color: var(--color-text-soft);
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+    .filter-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .filter-chip.active {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-color: var(--color-primary);
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--sp-6);
+    }
+    .course-card {
+      position: relative;
+      padding: var(--sp-8);
+      background: var(--color-glass-strong);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--color-glass-border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--dur-normal) var(--ease-out),
+                  box-shadow var(--dur-normal) var(--ease-out);
+      transform-style: preserve-3d;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .course-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: opacity var(--dur-normal) var(--ease-out);
+    }
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .course-card:hover::before { opacity: 1; }
+
+    .course-tag {
+      display: inline-flex; align-items: center; gap: var(--sp-1);
+      padding: var(--sp-1) var(--sp-3);
+      background: var(--color-accent-soft);
+      color: var(--color-accent-hover);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--sp-4);
+    }
+    .course-card h3 {
+      font-size: 1.375rem;
+      margin-bottom: var(--sp-3);
+    }
+    .course-card p {
+      color: var(--color-muted);
+      font-size: var(--fs-small);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--sp-6);
+    }
+    .course-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      padding-top: var(--sp-4);
+      border-top: 1px solid var(--color-border);
+      font-size: var(--fs-xs);
+      color: var(--color-muted);
+    }
+    .course-meta span {
+      display: inline-flex; align-items: center; gap: var(--sp-1);
+    }
+    .course-meta i { width: 14px; height: 14px; }
+
+    /* =========================================================
+       SECTION: ERASMUS
+       ========================================================= */
+    .erasmus {
+      background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .erasmus-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-12);
+      align-items: center;
+    }
+    @media (min-width: 960px) {
+      .erasmus-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-16); }
+    }
+    .erasmus-countries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+      margin-top: var(--sp-6);
+    }
+    .country-chip {
+      padding: var(--sp-2) var(--sp-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--fs-small);
+      font-weight: var(--fw-medium);
+      color: var(--color-text-soft);
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      transition: transform var(--dur-fast) var(--ease-out),
+                  border-color var(--dur-fast) var(--ease-out);
+    }
+    .country-chip:hover {
+      transform: translateY(-2px);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+    .country-flag { font-size: 1.1rem; }
+
+    /* =========================================================
+       SECTION: TESTIMONIALS
+       ========================================================= */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--sp-6);
+    }
+    .testimonial {
+      padding: var(--sp-8);
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      transition: transform var(--dur-normal) var(--ease-out),
+                  box-shadow var(--dur-normal) var(--ease-out);
+    }
+    .testimonial:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .testimonial-quote {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--color-accent);
+      opacity: 0.4;
+      position: absolute;
+      top: var(--sp-4); right: var(--sp-6);
+    }
+    .testimonial-text {
+      font-size: 1.0625rem;
+      line-height: var(--lh-relaxed);
+      color: var(--color-text-soft);
+      margin-bottom: var(--sp-6);
+      position: relative;
+      z-index: 2;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: var(--sp-3);
+    }
+    .testimonial-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: var(--color-text-inverse);
+      display: grid; place-items: center;
+      font-weight: var(--fw-semibold);
+      font-family: var(--font-display);
+    }
+    .testimonial-name {
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-body);
+      color: var(--color-text);
+    }
+    .testimonial-role {
+      font-size: var(--fs-small);
+      color: var(--color-muted);
+    }
+
+    /* =========================================================
+       SECTION: TRUST / CERTIFICATIONS
+       ========================================================= */
+    .trust {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--sp-8);
+      align-items: center;
+    }
+    .trust-badge {
+      display: flex; flex-direction: column; align-items: center;
+      gap: var(--sp-3);
+      text-align: center;
+    }
+    .trust-badge-icon {
+      width: 64px; height: 64px;
+      border-radius: var(--radius-lg);
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      display: grid; place-items: center;
+    }
+    .trust-badge-title {
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-small);
+    }
+    .trust-badge-desc {
+      font-size: var(--fs-xs);
+      color: var(--color-muted);
+    }
+
+    /* =========================================================
+       SECTION: PARTNERS MARQUEE
+       ========================================================= */
+    .partners {
+      padding: var(--sp-16) 0;
+      background: var(--color-bg-alt);
+      overflow: hidden;
+    }
+    .partners-label {
+      text-align: center;
+      font-size: var(--fs-small);
+      color: var(--color-muted);
+      font-weight: var(--fw-medium);
+      letter-spacing: var(--tracking-wide);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-8);
+    }
+    .marquee {
+      position: relative;
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      gap: var(--sp-12);
+      animation: marqueeSlide 40s linear infinite;
+      width: max-content;
+    }
+    @keyframes marqueeSlide {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .partner-item {
+      flex-shrink: 0;
+      padding: var(--sp-3) var(--sp-6);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-weight: var(--fw-semibold);
+      font-size: 1.0625rem;
+      color: var(--color-text-soft);
+      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+    }
+
+    /* =========================================================
+       SECTION: APPLICATION FORM
+       ========================================================= */
+    .apply {
+      background: var(--gradient-primary);
+      color: var(--color-text-inverse);
+      position: relative;
+      overflow: hidden;
+    }
+    .apply::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(at 80% 20%, rgba(249, 115, 22, 0.3) 0%, transparent 50%),
+        radial-gradient(at 20% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+      z-index: 0;
+    }
+    .apply .container { position: relative; z-index: 1; }
+    .apply-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-12);
+    }
+    @media (min-width: 960px) {
+      .apply-grid { grid-template-columns: 1fr 1.2fr; gap: var(--sp-16); }
+    }
+    .apply-info h2 { font-size: var(--fs-h2); margin-bottom: var(--sp-6); }
+    .apply-info p {
+      font-size: var(--fs-lead);
+      opacity: 0.9;
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--sp-8);
+    }
+    .apply-steps { display: flex; flex-direction: column; gap: var(--sp-4); }
+    .apply-step {
+      display: flex; gap: var(--sp-4);
+      padding: var(--sp-4);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+    }
+    .apply-step-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: white;
+      display: grid; place-items: center;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-small);
+      flex-shrink: 0;
+    }
+    .apply-step-text { font-size: var(--fs-small); line-height: var(--lh-normal); }
+
+    .form-card {
+      background: var(--color-surface);
+      color: var(--color-text);
+      padding: var(--sp-10);
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-xl);
+    }
+    .form-card h3 { font-size: 1.5rem; margin-bottom: var(--sp-6); }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-4);
+    }
+    @media (min-width: 600px) {
+      .form-row-2 { grid-template-columns: 1fr 1fr; }
+    }
+    .form-field { display: flex; flex-direction: column; gap: var(--sp-2); }
+    .form-field label {
+      font-size: var(--fs-small);
+      font-weight: var(--fw-medium);
+      color: var(--color-text-soft);
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: var(--sp-3) var(--sp-4);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      transition: border-color var(--dur-fast) var(--ease-out),
+                  box-shadow var(--dur-fast) var(--ease-out);
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.15);
+    }
+    .form-field textarea { min-height: 100px; resize: vertical; }
+    .form-consent {
+      display: flex; align-items: flex-start; gap: var(--sp-3);
+      margin: var(--sp-4) 0;
+      font-size: var(--fs-small);
+      color: var(--color-muted);
+    }
+    .form-consent input { width: 18px; height: 18px; accent-color: var(--color-primary); flex-shrink: 0; margin-top: 2px; }
+    .form-submit { width: 100%; }
+    .form-message {
+      margin-top: var(--sp-4);
+      padding: var(--sp-3) var(--sp-4);
+      border-radius: var(--radius-md);
+      font-size: var(--fs-small);
+      display: none;
+    }
+    .form-message.success {
+      display: block;
+      background: rgba(22, 163, 74, 0.1);
+      color: var(--color-success);
+      border: 1px solid rgba(22, 163, 74, 0.3);
+    }
+    .form-message.error {
+      display: block;
+      background: rgba(220, 38, 38, 0.1);
+      color: var(--color-error);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+    }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-question {
+      width: 100%;
+      padding: var(--sp-5) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--sp-4);
+      text-align: left;
+      font-size: 1.0625rem;
+      font-weight: var(--fw-semibold);
+      color: var(--color-text);
+    }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      display: grid; place-items: center;
+      transition: transform var(--dur-normal) var(--ease-smooth);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--dur-normal) var(--ease-smooth),
+                  padding var(--dur-normal) var(--ease-smooth);
+      color: var(--color-muted);
+      line-height: var(--lh-relaxed);
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding-bottom: var(--sp-5);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .footer {
+      background: var(--color-text);
+      color: rgba(255, 255, 255, 0.7);
+      padding: var(--sp-20) 0 var(--sp-8);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--sp-10);
+      margin-bottom: var(--sp-12);
+    }
+    .footer h4 {
+      color: white;
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      margin-bottom: var(--sp-5);
+    }
+    .footer-brand .logo { color: white; }
+    .footer-brand p {
+      font-size: var(--fs-small);
+      line-height: var(--lh-relaxed);
+      max-width: 320px;
+      margin-top: var(--sp-4);
+    }
+    .footer-links { display: flex; flex-direction: column; gap: var(--sp-3); }
+    .footer-links a {
+      font-size: var(--fs-small);
+      transition: color var(--dur-fast) var(--ease-out);
+    }
+    .footer-links a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: var(--sp-6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-4);
+      font-size: var(--fs-xs);
+    }
+    .footer-social {
+      display: flex; gap: var(--sp-3);
+    }
+    .footer-social a {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: grid; place-items: center;
+      transition: background-color var(--dur-fast) var(--ease-out);
+    }
+    .footer-social a:hover { background: var(--color-accent); color: white; }
+
+    /* =========================================================
+       SCROLL ANIMATIONS
+       ========================================================= */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       ACCESSIBILITY: reduced motion
+       ========================================================= */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .fade-in { opacity: 1; transform: none; }
+      .orbit, .marquee-track, .hero-blob, .hero-mesh, .globe-grid, .globe { animation: none !important; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      /* Mantém light por agora — dark mode na fase 2 */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       HEADER
+       ======================================================== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Academia Atlântica — Início">
+        <span class="logo-mark">A</span>
+        <span data-i18n="brand">Academia Atlântica</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#cursos" data-i18n="nav.courses">Cursos</a>
+        <a href="#erasmus" data-i18n="nav.erasmus">Erasmus+</a>
+        <a href="#alumni" data-i18n="nav.alumni">Alumni</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" data-lang="pt" role="group" aria-label="Idioma">
+          <span class="lang-toggle-slider" aria-hidden="true"></span>
+          <button type="button" data-lang-btn="pt" class="active" aria-pressed="true">PT</button>
+          <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a href="#candidatura" class="btn btn-primary" data-i18n="nav.apply">Candidatar</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fechar menu">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="#cursos" data-i18n="nav.courses">Cursos</a>
+    <a href="#erasmus" data-i18n="nav.erasmus">Erasmus+</a>
+    <a href="#alumni" data-i18n="nav.alumni">Alumni</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    <a href="#candidatura" class="btn btn-primary" data-i18n="nav.apply">Candidatar</a>
+  </aside>
+
+  <!-- ========================================================
+       HERO
+       ======================================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span data-i18n="hero.badge">Candidaturas 2026/27 abertas</span>
+          </div>
+
+          <h1>
+            <span data-i18n="hero.title.1">Formação profissional com </span>
+            <span class="accent" data-i18n="hero.title.2">horizonte internacional</span>
+          </h1>
+
+          <p class="hero-lead" data-i18n="hero.lead">
+            Escola profissional na Trofa com cursos de Nível IV reconhecidos pela ANQEP e programa Erasmus+ em 16 países parceiros. Sai da escola com diploma, experiência internacional e CV pronto para o mercado.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#cursos" class="btn btn-primary btn-lg" data-i18n="hero.cta.primary">
+              Ver cursos
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#erasmus" class="btn btn-secondary btn-lg" data-i18n="hero.cta.secondary">
+              <i data-lucide="globe"></i>
+              Programa Erasmus+
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <div class="stat-num">17</div>
+              <div class="stat-label" data-i18n="hero.stat.1">anos a formar</div>
+            </div>
+            <div>
+              <div class="stat-num">94%</div>
+              <div class="stat-label" data-i18n="hero.stat.2">empregabilidade</div>
+            </div>
+            <div>
+              <div class="stat-num">16</div>
+              <div class="stat-label" data-i18n="hero.stat.3">países parceiros</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="false">
+          <div class="globe-stage">
+            <div class="globe" aria-hidden="true"></div>
+            <div class="globe-grid" aria-hidden="true"></div>
+            <div class="orbit" id="orbit" aria-label="Países parceiros Erasmus+"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       VALUE PROPS
+       ======================================================== -->
+  <section class="section values fade-in">
+    <div class="container">
+      <div class="values-grid">
+        <div class="value">
+          <div class="value-icon"><i data-lucide="graduation-cap"></i></div>
+          <h3 data-i18n="value.1.title">Diploma Nível IV</h3>
+          <p data-i18n="value.1.desc">Cursos profissionais com dupla certificação académica e profissional. Equivalência ao 12.º ano com saída direta para o mercado.</p>
+        </div>
+        <div class="value">
+          <div class="value-icon"><i data-lucide="plane"></i></div>
+          <h3 data-i18n="value.2.title">Erasmus+ incluído</h3>
+          <p data-i18n="value.2.desc">Todos os alunos têm direito a estágio internacional remunerado, com bolsa total, alojamento e viagem incluídos.</p>
+        </div>
+        <div class="value">
+          <div class="value-icon"><i data-lucide="briefcase"></i></div>
+          <h3 data-i18n="value.3.title">Estágio garantido</h3>
+          <p data-i18n="value.3.desc">Rede de 200+ empresas parceiras na região Norte. 94% dos nossos alunos ficam empregados nos primeiros 6 meses após a conclusão.</p>
+        </div>
+        <div class="value">
+          <div class="value-icon"><i data-lucide="euro"></i></div>
+          <h3 data-i18n="value.4.title">Ensino gratuito</h3>
+          <p data-i18n="value.4.desc">Todos os nossos cursos são totalmente financiados pelo Estado Português e União Europeia. Inclui bolsa mensal de mérito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       COURSES
+       ======================================================== -->
+  <section class="section" id="cursos">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow"><i data-lucide="layers" style="width:14px;height:14px"></i><span data-i18n="courses.eyebrow">Catálogo</span></span>
+        <h2 class="section-title" data-i18n="courses.title">Cursos profissionais 2026/27</h2>
+        <p class="section-subtitle" data-i18n="courses.subtitle">Seis percursos profissionais, todos com estágio internacional Erasmus+ e ligação direta a empresas parceiras.</p>
+      </div>
+
+      <div class="courses-filters fade-in" role="tablist" aria-label="Filtrar cursos por área">
+        <button class="filter-chip active" data-filter="all" data-i18n="courses.filter.all">Todos</button>
+        <button class="filter-chip" data-filter="tech" data-i18n="courses.filter.tech">Tecnologia</button>
+        <button class="filter-chip" data-filter="business" data-i18n="courses.filter.business">Gestão</button>
+        <button class="filter-chip" data-filter="creative" data-i18n="courses.filter.creative">Criativos</button>
+        <button class="filter-chip" data-filter="services" data-i18n="courses.filter.services">Serviços</button>
+      </div>
+
+      <div class="courses-grid fade-in" id="coursesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ERASMUS
+       ======================================================== -->
+  <section class="section erasmus" id="erasmus">
+    <div class="container">
+      <div class="erasmus-grid">
+        <div class="fade-in">
+          <span class="eyebrow"><i data-lucide="globe" style="width:14px;height:14px"></i>Erasmus+</span>
+          <h2 class="section-title" data-i18n="erasmus.title">Estuda em Portugal, estagia na Europa</h2>
+          <p class="section-subtitle" data-i18n="erasmus.subtitle">Todos os alunos do 2.º e 3.º ano fazem um estágio profissional de 3 meses num país parceiro. Bolsa total, alojamento e viagem cobertos.</p>
+
+          <div class="erasmus-countries" id="erasmusCountries"></div>
+
+          <a href="#candidatura" class="btn btn-primary" style="margin-top: var(--sp-8);">
+            <span data-i18n="erasmus.cta">Saber mais sobre Erasmus+</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="fade-in">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4);">
+            <div style="padding: var(--sp-6); background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+              <div class="stat-num" style="font-size: 2.5rem;">320</div>
+              <div class="stat-label" data-i18n="erasmus.kpi.1">alunos enviados desde 2015</div>
+            </div>
+            <div style="padding: var(--sp-6); background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+              <div class="stat-num" style="font-size: 2.5rem;">100%</div>
+              <div class="stat-label" data-i18n="erasmus.kpi.2">bolsa coberta</div>
+            </div>
+            <div style="padding: var(--sp-6); background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+              <div class="stat-num" style="font-size: 2.5rem;">3 meses</div>
+              <div class="stat-label" data-i18n="erasmus.kpi.3">duração média do estágio</div>
+            </div>
+            <div style="padding: var(--sp-6); background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+              <div class="stat-num" style="font-size: 2.5rem;">€850</div>
+              <div class="stat-label" data-i18n="erasmus.kpi.4">bolsa mensal média</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TESTIMONIALS
+       ======================================================== -->
+  <section class="section" id="alumni">
+    <div class="container">
+      <div class="section-header center fade-in">
+        <span class="eyebrow"><i data-lucide="users" style="width:14px;height:14px"></i><span data-i18n="alumni.eyebrow">Alumni</span></span>
+        <h2 class="section-title" data-i18n="alumni.title">Histórias reais de quem passou por cá</h2>
+      </div>
+      <div class="testimonials-grid fade-in" id="testimonialsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PARTNERS MARQUEE
+       ======================================================== -->
+  <section class="partners">
+    <div class="container">
+      <p class="partners-label" data-i18n="partners.label">Universidades e empresas parceiras</p>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TRUST / CERTIFICATIONS
+       ======================================================== -->
+  <section class="section-tight trust fade-in">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-badge">
+          <div class="trust-badge-icon"><i data-lucide="shield-check"></i></div>
+          <div class="trust-badge-title">ANQEP</div>
+          <div class="trust-badge-desc" data-i18n="trust.1">Acreditação oficial</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon"><i data-lucide="award"></i></div>
+          <div class="trust-badge-title">EQAVET</div>
+          <div class="trust-badge-desc" data-i18n="trust.2">Selo de qualidade EU</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon"><i data-lucide="globe-2"></i></div>
+          <div class="trust-badge-title">Erasmus+ ECHE</div>
+          <div class="trust-badge-desc" data-i18n="trust.3">Carta Erasmus 2021-27</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon"><i data-lucide="star"></i></div>
+          <div class="trust-badge-title">ISO 9001</div>
+          <div class="trust-badge-desc" data-i18n="trust.4">Sistema de qualidade</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       APPLICATION FORM
+       ======================================================== -->
+  <section class="section apply" id="candidatura">
+    <div class="container">
+      <div class="apply-grid">
+        <div class="apply-info fade-in">
+          <h2 data-i18n="apply.title">Candidata-te agora</h2>
+          <p data-i18n="apply.lead">Preenche o formulário e a nossa equipa de admissões entra em contacto contigo em 48h úteis. Sem compromisso.</p>
+
+          <div class="apply-steps">
+            <div class="apply-step">
+              <div class="apply-step-num">1</div>
+              <div class="apply-step-text" data-i18n="apply.step.1">Submetes o formulário online com os teus dados básicos.</div>
+            </div>
+            <div class="apply-step">
+              <div class="apply-step-num">2</div>
+              <div class="apply-step-text" data-i18n="apply.step.2">Recebes um convite para sessão de esclarecimento (online ou presencial).</div>
+            </div>
+            <div class="apply-step">
+              <div class="apply-step-num">3</div>
+              <div class="apply-step-text" data-i18n="apply.step.3">Entrevista vocacional para escolher o melhor percurso.</div>
+            </div>
+            <div class="apply-step">
+              <div class="apply-step-num">4</div>
+              <div class="apply-step-text" data-i18n="apply.step.4">Matrícula confirmada e início em setembro.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card fade-in" id="contacto">
+          <h3 data-i18n="form.title">Pedido de informação</h3>
+          <form id="applyForm" novalidate>
+            <div class="form-row form-row-2">
+              <div class="form-field">
+                <label for="firstName" data-i18n="form.firstName">Primeiro nome</label>
+                <input id="firstName" name="firstName" type="text" required autocomplete="given-name" />
+              </div>
+              <div class="form-field">
+                <label for="lastName" data-i18n="form.lastName">Apelido</label>
+                <input id="lastName" name="lastName" type="text" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-row form-row-2">
+              <div class="form-field">
+                <label for="email" data-i18n="form.email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="phone" data-i18n="form.phone">Telemóvel</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="course" data-i18n="form.course">Curso de interesse</label>
+                <select id="course" name="course" required>
+                  <option value="" data-i18n="form.course.placeholder">Escolhe um curso</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="message" data-i18n="form.message">Mensagem (opcional)</label>
+                <textarea id="message" name="message" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="form-consent">
+              <input id="consent" type="checkbox" required />
+              <label for="consent" data-i18n="form.consent">Autorizo o tratamento dos meus dados para efeitos de contacto, nos termos do RGPD.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              <span data-i18n="form.submit">Enviar candidatura</span>
+              <i data-lucide="send"></i>
+            </button>
+
+            <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FAQ
+       ======================================================== -->
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <div class="section-header center fade-in">
+        <span class="eyebrow"><i data-lucide="help-circle" style="width:14px;height:14px"></i>FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">Perguntas frequentes</h2>
+      </div>
+      <div class="faq-list fade-in" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">A</span>
+            <span>Academia Atlântica</span>
+          </div>
+          <p data-i18n="footer.about">Escola profissional na Trofa com 17 anos de experiência. Formamos jovens para o mercado de trabalho com componente internacional Erasmus+.</p>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.school">Escola</h4>
+          <div class="footer-links">
+            <a href="#cursos" data-i18n="footer.courses">Cursos</a>
+            <a href="#erasmus" data-i18n="footer.erasmus">Erasmus+</a>
+            <a href="#alumni" data-i18n="footer.alumni">Alumni</a>
+            <a href="#" data-i18n="footer.team">Equipa</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.support">Apoio</h4>
+          <div class="footer-links">
+            <a href="#candidatura" data-i18n="footer.admissions">Candidaturas</a>
+            <a href="#faq" data-i18n="footer.faq">FAQ</a>
+            <a href="#" data-i18n="footer.scholarships">Bolsas</a>
+            <a href="#" data-i18n="footer.docs">Documentos</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.contact">Contacto</h4>
+          <div class="footer-links">
+            <a href="mailto:geral@academia-atlantica.pt">geral@academia-atlantica.pt</a>
+            <a href="tel:+351252000000">+351 252 000 000</a>
+            <a href="#">Rua da Educação, 100<br />4785-000 Trofa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Academia Atlântica. <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:16px;height:16px"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:16px;height:16px"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:16px;height:16px"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube" style="width:16px;height:16px"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       SCRIPT
+       ======================================================== -->
+  <script>
+    /* ==========================================================
+       TRANSLATIONS — pt / en
+       ========================================================== */
+    const TRANSLATIONS = {
+      pt: {
+        'brand': 'Academia Atlântica',
+        'nav.courses': 'Cursos',
+        'nav.erasmus': 'Erasmus+',
+        'nav.alumni': 'Alumni',
+        'nav.faq': 'FAQ',
+        'nav.contact': 'Contacto',
+        'nav.apply': 'Candidatar',
+
+        'hero.badge': 'Candidaturas 2026/27 abertas',
+        'hero.title.1': 'Formação profissional com ',
+        'hero.title.2': 'horizonte internacional',
+        'hero.lead': 'Escola profissional na Trofa com cursos de Nível IV reconhecidos pela ANQEP e programa Erasmus+ em 16 países parceiros. Sai da escola com diploma, experiência internacional e CV pronto para o mercado.',
+        'hero.cta.primary': 'Ver cursos',
+        'hero.cta.secondary': 'Programa Erasmus+',
+        'hero.stat.1': 'anos a formar',
+        'hero.stat.2': 'empregabilidade',
+        'hero.stat.3': 'países parceiros',
+
+        'value.1.title': 'Diploma Nível IV',
+        'value.1.desc': 'Cursos profissionais com dupla certificação académica e profissional. Equivalência ao 12.º ano com saída direta para o mercado.',
+        'value.2.title': 'Erasmus+ incluído',
+        'value.2.desc': 'Todos os alunos têm direito a estágio internacional remunerado, com bolsa total, alojamento e viagem incluídos.',
+        'value.3.title': 'Estágio garantido',
+        'value.3.desc': 'Rede de 200+ empresas parceiras na região Norte. 94% dos nossos alunos ficam empregados nos primeiros 6 meses após a conclusão.',
+        'value.4.title': 'Ensino gratuito',
+        'value.4.desc': 'Todos os nossos cursos são totalmente financiados pelo Estado Português e União Europeia. Inclui bolsa mensal de mérito.',
+
+        'courses.eyebrow': 'Catálogo',
+        'courses.title': 'Cursos profissionais 2026/27',
+        'courses.subtitle': 'Seis percursos profissionais, todos com estágio internacional Erasmus+ e ligação direta a empresas parceiras.',
+        'courses.filter.all': 'Todos',
+        'courses.filter.tech': 'Tecnologia',
+        'courses.filter.business': 'Gestão',
+        'courses.filter.creative': 'Criativos',
+        'courses.filter.services': 'Serviços',
+        'courses.duration': '3 anos',
+        'courses.level': 'Nível IV',
+        'courses.mode': 'Presencial',
+
+        'erasmus.title': 'Estuda em Portugal, estagia na Europa',
+        'erasmus.subtitle': 'Todos os alunos do 2.º e 3.º ano fazem um estágio profissional de 3 meses num país parceiro. Bolsa total, alojamento e viagem cobertos.',
+        'erasmus.cta': 'Saber mais sobre Erasmus+',
+        'erasmus.kpi.1': 'alunos enviados desde 2015',
+        'erasmus.kpi.2': 'bolsa coberta',
+        'erasmus.kpi.3': 'duração média do estágio',
+        'erasmus.kpi.4': 'bolsa mensal média',
+
+        'alumni.eyebrow': 'Alumni',
+        'alumni.title': 'Histórias reais de quem passou por cá',
+
+        'partners.label': 'Universidades e empresas parceiras',
+
+        'trust.1': 'Acreditação oficial',
+        'trust.2': 'Selo de qualidade EU',
+        'trust.3': 'Carta Erasmus 2021-27',
+        'trust.4': 'Sistema de qualidade',
+
+        'apply.title': 'Candidata-te agora',
+        'apply.lead': 'Preenche o formulário e a nossa equipa de admissões entra em contacto contigo em 48h úteis. Sem compromisso.',
+        'apply.step.1': 'Submetes o formulário online com os teus dados básicos.',
+        'apply.step.2': 'Recebes um convite para sessão de esclarecimento (online ou presencial).',
+        'apply.step.3': 'Entrevista vocacional para escolher o melhor percurso.',
+        'apply.step.4': 'Matrícula confirmada e início em setembro.',
+
+        'form.title': 'Pedido de informação',
+        'form.firstName': 'Primeiro nome',
+        'form.lastName': 'Apelido',
+        'form.email': 'Email',
+        'form.phone': 'Telemóvel',
+        'form.course': 'Curso de interesse',
+        'form.course.placeholder': 'Escolhe um curso',
+        'form.message': 'Mensagem (opcional)',
+        'form.consent': 'Autorizo o tratamento dos meus dados para efeitos de contacto, nos termos do RGPD.',
+        'form.submit': 'Enviar candidatura',
+        'form.success': 'Recebemos a tua candidatura. Entraremos em contacto em 48h úteis.',
+        'form.error': 'Por favor preenche todos os campos obrigatórios.',
+
+        'faq.title': 'Perguntas frequentes',
+
+        'footer.about': 'Escola profissional na Trofa com 17 anos de experiência. Formamos jovens para o mercado de trabalho com componente internacional Erasmus+.',
+        'footer.school': 'Escola',
+        'footer.courses': 'Cursos',
+        'footer.erasmus': 'Erasmus+',
+        'footer.alumni': 'Alumni',
+        'footer.team': 'Equipa',
+        'footer.support': 'Apoio',
+        'footer.admissions': 'Candidaturas',
+        'footer.faq': 'FAQ',
+        'footer.scholarships': 'Bolsas',
+        'footer.docs': 'Documentos',
+        'footer.contact': 'Contacto',
+        'footer.rights': 'Todos os direitos reservados.'
+      },
+      en: {
+        'brand': 'Academia Atlântica',
+        'nav.courses': 'Programs',
+        'nav.erasmus': 'Erasmus+',
+        'nav.alumni': 'Alumni',
+        'nav.faq': 'FAQ',
+        'nav.contact': 'Contact',
+        'nav.apply': 'Apply now',
+
+        'hero.badge': '2026/27 applications open',
+        'hero.title.1': 'Vocational training with an ',
+        'hero.title.2': 'international horizon',
+        'hero.lead': 'Vocational school in Trofa, Portugal, offering EQF Level 4 programs accredited by ANQEP and Erasmus+ placements across 16 partner countries. Graduate with a diploma, international experience, and a job-ready CV.',
+        'hero.cta.primary': 'Explore programs',
+        'hero.cta.secondary': 'Erasmus+ program',
+        'hero.stat.1': 'years training students',
+        'hero.stat.2': 'employment rate',
+        'hero.stat.3': 'partner countries',
+
+        'value.1.title': 'EQF Level 4 diploma',
+        'value.1.desc': 'Vocational programs with dual academic and professional certification. Equivalent to the 12th grade with a direct path into the workforce.',
+        'value.2.title': 'Erasmus+ included',
+        'value.2.desc': 'Every student gets a paid international placement with full grant, accommodation, and travel covered.',
+        'value.3.title': 'Guaranteed internship',
+        'value.3.desc': 'Network of 200+ partner companies across northern Portugal. 94% of our graduates find a job within 6 months.',
+        'value.4.title': 'Free tuition',
+        'value.4.desc': 'All our programs are fully funded by the Portuguese State and the European Union. Monthly merit grant included.',
+
+        'courses.eyebrow': 'Catalogue',
+        'courses.title': 'Vocational programs 2026/27',
+        'courses.subtitle': 'Six career paths, all with an Erasmus+ international internship and direct ties to industry partners.',
+        'courses.filter.all': 'All',
+        'courses.filter.tech': 'Technology',
+        'courses.filter.business': 'Business',
+        'courses.filter.creative': 'Creative',
+        'courses.filter.services': 'Services',
+        'courses.duration': '3 years',
+        'courses.level': 'EQF 4',
+        'courses.mode': 'On-site',
+
+        'erasmus.title': 'Study in Portugal, intern across Europe',
+        'erasmus.subtitle': 'All 2nd and 3rd year students complete a 3-month professional placement in a partner country. Full grant, accommodation, and travel are covered.',
+        'erasmus.cta': 'Learn more about Erasmus+',
+        'erasmus.kpi.1': 'students placed since 2015',
+        'erasmus.kpi.2': 'grant covered',
+        'erasmus.kpi.3': 'average placement length',
+        'erasmus.kpi.4': 'average monthly grant',
+
+        'alumni.eyebrow': 'Alumni',
+        'alumni.title': 'Real stories from real graduates',
+
+        'partners.label': 'Partner universities and companies',
+
+        'trust.1': 'Official accreditation',
+        'trust.2': 'EU quality label',
+        'trust.3': 'Erasmus Charter 2021-27',
+        'trust.4': 'Quality management',
+
+        'apply.title': 'Apply today',
+        'apply.lead': 'Fill out the form and our admissions team will reach out within 48 business hours. No commitment required.',
+        'apply.step.1': 'Submit the online form with your basic details.',
+        'apply.step.2': 'Get invited to an info session (online or on-site).',
+        'apply.step.3': 'Career-fit interview to choose the right program.',
+        'apply.step.4': 'Enrollment confirmed and classes start in September.',
+
+        'form.title': 'Request information',
+        'form.firstName': 'First name',
+        'form.lastName': 'Last name',
+        'form.email': 'Email',
+        'form.phone': 'Phone',
+        'form.course': 'Program of interest',
+        'form.course.placeholder': 'Choose a program',
+        'form.message': 'Message (optional)',
+        'form.consent': 'I agree to the processing of my personal data for contact purposes, in accordance with GDPR.',
+        'form.submit': 'Submit application',
+        'form.success': 'We received your application. We will be in touch within 48 business hours.',
+        'form.error': 'Please fill in all required fields.',
+
+        'faq.title': 'Frequently asked questions',
+
+        'footer.about': 'Vocational school in Trofa with 17 years of experience. We train young people for the job market with an Erasmus+ international component.',
+        'footer.school': 'School',
+        'footer.courses': 'Programs',
+        'footer.erasmus': 'Erasmus+',
+        'footer.alumni': 'Alumni',
+        'footer.team': 'Team',
+        'footer.support': 'Support',
+        'footer.admissions': 'Admissions',
+        'footer.faq': 'FAQ',
+        'footer.scholarships': 'Scholarships',
+        'footer.docs': 'Documents',
+        'footer.contact': 'Contact',
+        'footer.rights': 'All rights reserved.'
+      }
+    };
+
+    /* ==========================================================
+       COURSES
+       ========================================================== */
+    const COURSES = [
+      {
+        id: 'ti',
+        category: 'tech',
+        icon: 'code-2',
+        title: { pt: 'Tecnologias da Informação', en: 'Information Technology' },
+        desc:  {
+          pt: 'Desenvolvimento web, redes, bases de dados e cibersegurança. Saída direta como dev junior, sysadmin ou suporte IT.',
+          en: 'Web development, networks, databases, and cybersecurity. Graduate as junior dev, sysadmin, or IT support.'
+        }
+      },
+      {
+        id: 'mkt',
+        category: 'business',
+        icon: 'trending-up',
+        title: { pt: 'Gestão e Marketing Digital', en: 'Digital Marketing & Management' },
+        desc:  {
+          pt: 'Estratégia digital, gestão de redes sociais, e-commerce e análise de dados. Para quem quer trabalhar em agências ou empresas.',
+          en: 'Digital strategy, social media, e-commerce, and analytics. For students aiming at agencies or in-house marketing roles.'
+        }
+      },
+      {
+        id: 'turismo',
+        category: 'services',
+        icon: 'palmtree',
+        title: { pt: 'Turismo e Hotelaria', en: 'Tourism & Hospitality' },
+        desc:  {
+          pt: 'Gestão hoteleira, animação turística e operações de restauração. Estágios em hotéis 4* e 5* em Portugal e no estrangeiro.',
+          en: 'Hotel management, tourism activities, and F&B operations. Placements in 4* and 5* hotels in Portugal and abroad.'
+        }
+      },
+      {
+        id: 'design',
+        category: 'creative',
+        icon: 'pen-tool',
+        title: { pt: 'Design Multimédia', en: 'Multimedia Design' },
+        desc:  {
+          pt: 'Design gráfico, motion, vídeo, UI/UX e produção de conteúdo digital. Portfolio profissional à saída.',
+          en: 'Graphic design, motion, video, UI/UX, and digital content production. Professional portfolio at graduation.'
+        }
+      },
+      {
+        id: 'eletro',
+        category: 'tech',
+        icon: 'cpu',
+        title: { pt: 'Eletromecânica e Automação', en: 'Electromechanics & Automation' },
+        desc:  {
+          pt: 'Manutenção industrial, robótica e automação. Parceria direta com a indústria automóvel e metalúrgica do Norte.',
+          en: 'Industrial maintenance, robotics, and automation. Direct partnership with northern Portugal\'s automotive and metalworking industries.'
+        }
+      },
+      {
+        id: 'vet',
+        category: 'services',
+        icon: 'heart-pulse',
+        title: { pt: 'Cuidados Veterinários', en: 'Veterinary Care' },
+        desc:  {
+          pt: 'Auxiliar de veterinária com formação prática em clínica, laboratório e bem-estar animal.',
+          en: 'Veterinary assistant program with hands-on training in clinic, lab, and animal welfare.'
+        }
+      }
+    ];
+
+    /* ==========================================================
+       FAQ
+       ========================================================== */
+    const FAQ = [
+      {
+        q: { pt: 'Quanto custa o curso?', en: 'How much does the program cost?' },
+        a: {
+          pt: 'Todos os cursos profissionais da Academia Atlântica são totalmente gratuitos. Estão financiados pelo Estado Português e pela União Europeia. Inclui ainda bolsa de mérito mensal e apoio a transportes e alimentação.',
+          en: 'All our vocational programs are completely free. They are funded by the Portuguese State and the European Union. A monthly merit grant plus transportation and meal support are also included.'
+        }
+      },
+      {
+        q: { pt: 'Como funciona o Erasmus+?', en: 'How does Erasmus+ work?' },
+        a: {
+          pt: 'No 2.º e 3.º ano, todos os alunos fazem um estágio profissional de 3 meses numa empresa de um dos 16 países parceiros. A escola trata da viagem, alojamento, seguro e bolsa (média €850/mês).',
+          en: 'In years 2 and 3, all students complete a 3-month professional placement in a company in one of our 16 partner countries. The school handles travel, accommodation, insurance, and grant (average €850/month).'
+        }
+      },
+      {
+        q: { pt: 'Quem se pode candidatar?', en: 'Who can apply?' },
+        a: {
+          pt: 'Jovens entre os 15 e os 20 anos que tenham concluído o 9.º ano de escolaridade. Candidaturas abertas entre fevereiro e julho. Após análise, há uma entrevista vocacional.',
+          en: 'Young people aged 15 to 20 who have completed 9th grade. Applications open between February and July. After review, there is a career-fit interview.'
+        }
+      },
+      {
+        q: { pt: 'Que certificação obtenho no final?', en: 'What certification do I get at the end?' },
+        a: {
+          pt: 'Diploma de Nível IV do Quadro Nacional de Qualificações (equivalente ao 12.º ano) + certificado profissional + Europass Mobility do Erasmus+. Permite acesso direto ao mercado de trabalho ou ao ensino superior.',
+          en: 'A National Qualifications Framework Level 4 diploma (equivalent to 12th grade) + professional certificate + Erasmus+ Europass Mobility. You can enter the job market directly or progress to higher education.'
+        }
+      },
+      {
+        q: { pt: 'Posso continuar para a universidade?', en: 'Can I go to university afterwards?' },
+        a: {
+          pt: 'Sim. O diploma de Nível IV dá acesso a todos os cursos do ensino superior, incluindo licenciaturas e cursos técnicos superiores profissionais (CTeSP). 30% dos nossos alunos seguem para a universidade.',
+          en: 'Yes. The Level 4 diploma grants access to all higher education programs, including bachelor\'s degrees and professional higher technical courses (CTeSP). 30% of our graduates continue to university.'
+        }
+      },
+      {
+        q: { pt: 'Onde fica a escola?', en: 'Where is the school located?' },
+        a: {
+          pt: 'Estamos na Trofa, a 20 minutos do Porto, com excelentes acessos (A3 + linha de comboio Porto-Braga). Temos transporte escolar próprio para alunos de Famalicão, Santo Tirso, Maia e Vila do Conde.',
+          en: 'We are in Trofa, 20 minutes from Porto, with excellent transport links (A3 motorway + Porto-Braga railway line). We provide school transport for students from Famalicão, Santo Tirso, Maia, and Vila do Conde.'
+        }
+      }
+    ];
+
+    /* ==========================================================
+       TESTIMONIALS
+       ========================================================== */
+    const TESTIMONIALS = [
+      {
+        name: 'Beatriz Mendes',
+        role: { pt: 'Tecnologias da Informação · Turma 2023', en: 'IT · Class of 2023' },
+        avatar: 'BM',
+        quote: {
+          pt: 'Fiz Erasmus em Dublin, voltei com proposta de trabalho na mão. Hoje sou dev front-end numa startup portuguesa. A escola mudou-me a vida.',
+          en: 'I did my Erasmus in Dublin and came back with a job offer. Today I\'m a front-end dev at a Portuguese startup. This school changed my life.'
+        }
+      },
+      {
+        name: 'Tiago Costa',
+        role: { pt: 'Turismo · Turma 2022', en: 'Tourism · Class of 2022' },
+        avatar: 'TC',
+        quote: {
+          pt: 'Estagiei em Mallorca e descobri que era isto que queria fazer. Hoje trabalho num resort 5* no Algarve com 22 anos.',
+          en: 'I did my internship in Mallorca and discovered this was what I wanted to do. Today I work at a 5* resort in the Algarve at 22.'
+        }
+      },
+      {
+        name: 'Mariana Silva',
+        role: { pt: 'Design Multimédia · Turma 2024', en: 'Multimedia Design · Class of 2024' },
+        avatar: 'MS',
+        quote: {
+          pt: 'Os professores são profissionais a sério, com experiência no mercado. Saí com portfolio, network e estágio em Amesterdão.',
+          en: 'The teachers are real professionals with market experience. I left with a portfolio, a network, and an internship in Amsterdam.'
+        }
+      }
+    ];
+
+    /* ==========================================================
+       PARTNERS (placeholders — substituir por logos reais depois)
+       ========================================================== */
+    const PARTNERS = [
+      { name: 'Universidad de Salamanca', country: '🇪🇸' },
+      { name: 'Université de Lyon', country: '🇫🇷' },
+      { name: 'TU München', country: '🇩🇪' },
+      { name: 'Politecnico di Milano', country: '🇮🇹' },
+      { name: 'TU Delft', country: '🇳🇱' },
+      { name: 'University of Warsaw', country: '🇵🇱' },
+      { name: 'Charles University Prague', country: '🇨🇿' },
+      { name: 'Trinity College Dublin', country: '🇮🇪' },
+      { name: 'Lund University', country: '🇸🇪' },
+      { name: 'Aalto University', country: '🇫🇮' }
+    ];
+
+    /* ==========================================================
+       ERASMUS COUNTRIES
+       ========================================================== */
+    const ERASMUS_COUNTRIES = [
+      { code: 'ES', name: { pt: 'Espanha', en: 'Spain' }, flag: '🇪🇸' },
+      { code: 'FR', name: { pt: 'França', en: 'France' }, flag: '🇫🇷' },
+      { code: 'DE', name: { pt: 'Alemanha', en: 'Germany' }, flag: '🇩🇪' },
+      { code: 'IT', name: { pt: 'Itália', en: 'Italy' }, flag: '🇮🇹' },
+      { code: 'NL', name: { pt: 'Países Baixos', en: 'Netherlands' }, flag: '🇳🇱' },
+      { code: 'PL', name: { pt: 'Polónia', en: 'Poland' }, flag: '🇵🇱' },
+      { code: 'CZ', name: { pt: 'Chéquia', en: 'Czechia' }, flag: '🇨🇿' },
+      { code: 'IE', name: { pt: 'Irlanda', en: 'Ireland' }, flag: '🇮🇪' },
+      { code: 'SE', name: { pt: 'Suécia', en: 'Sweden' }, flag: '🇸🇪' },
+      { code: 'FI', name: { pt: 'Finlândia', en: 'Finland' }, flag: '🇫🇮' },
+      { code: 'EE', name: { pt: 'Estónia', en: 'Estonia' }, flag: '🇪🇪' },
+      { code: 'RO', name: { pt: 'Roménia', en: 'Romania' }, flag: '🇷🇴' },
+      { code: 'GR', name: { pt: 'Grécia', en: 'Greece' }, flag: '🇬🇷' },
+      { code: 'BE', name: { pt: 'Bélgica', en: 'Belgium' }, flag: '🇧🇪' },
+      { code: 'AT', name: { pt: 'Áustria', en: 'Austria' }, flag: '🇦🇹' },
+      { code: 'HR', name: { pt: 'Croácia', en: 'Croatia' }, flag: '🇭🇷' }
+    ];
+
+    /* ==========================================================
+       STATE + I18N
+       ========================================================== */
+    let currentLang = 'pt';
+
+    function t(key) {
+      return TRANSLATIONS[currentLang][key] || key;
+    }
+
+    function applyTranslations() {
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (TRANSLATIONS[currentLang][key] !== undefined) {
+          el.textContent = TRANSLATIONS[currentLang][key];
+        }
+      });
+      // Re-render dynamic content
+      renderCourses(currentCourseFilter);
+      renderFAQ();
+      renderTestimonials();
+      renderErasmusCountries();
+      renderCourseSelect();
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const toggle = document.querySelector('.lang-toggle');
+      toggle.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+        const active = btn.getAttribute('data-lang-btn') === lang;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', active);
+      });
+      applyTranslations();
+    }
+
+    /* ==========================================================
+       RENDER: COURSES
+       ========================================================== */
+    let currentCourseFilter = 'all';
+
+    function renderCourses(filter = 'all') {
+      const grid = document.getElementById('coursesGrid');
+      const list = filter === 'all' ? COURSES : COURSES.filter(c => c.category === filter);
+      grid.innerHTML = list.map(c => `
+        <article class="course-card" data-category="${c.category}" tabindex="0">
+          <span class="course-tag">
+            <i data-lucide="${c.icon}" style="width:12px;height:12px"></i>
+            ${t('courses.filter.' + c.category)}
+          </span>
+          <h3>${c.title[currentLang]}</h3>
+          <p>${c.desc[currentLang]}</p>
+          <div class="course-meta">
+            <span><i data-lucide="clock"></i> ${t('courses.duration')}</span>
+            <span><i data-lucide="award"></i> ${t('courses.level')}</span>
+            <span><i data-lucide="map-pin"></i> ${t('courses.mode')}</span>
+          </div>
+        </article>
+      `).join('');
+      if (window.lucide) window.lucide.createIcons();
+      attachTilt();
+    }
+
+    function renderCourseSelect() {
+      const select = document.getElementById('course');
+      if (!select) return;
+      select.innerHTML = `<option value="">${t('form.course.placeholder')}</option>` +
+        COURSES.map(c => `<option value="${c.id}">${c.title[currentLang]}</option>`).join('');
+    }
+
+    /* ==========================================================
+       RENDER: FAQ
+       ========================================================== */
+    function renderFAQ() {
+      const list = document.getElementById('faqList');
+      list.innerHTML = FAQ.map((item, i) => `
+        <div class="faq-item" data-faq="${i}">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-${i}">
+            <span>${item.q[currentLang]}</span>
+            <span class="faq-icon" aria-hidden="true"><i data-lucide="plus" style="width:16px;height:16px"></i></span>
+          </button>
+          <div class="faq-answer" id="faq-${i}">${item.a[currentLang]}</div>
+        </div>
+      `).join('');
+      if (window.lucide) window.lucide.createIcons();
+
+      list.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const isOpen = item.classList.contains('open');
+          item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', !isOpen);
+        });
+      });
+    }
+
+    /* ==========================================================
+       RENDER: TESTIMONIALS
+       ========================================================== */
+    function renderTestimonials() {
+      const grid = document.getElementById('testimonialsGrid');
+      grid.innerHTML = TESTIMONIALS.map(tt => `
+        <article class="testimonial">
+          <div class="testimonial-quote" aria-hidden="true">"</div>
+          <p class="testimonial-text">${tt.quote[currentLang]}</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">${tt.avatar}</div>
+            <div>
+              <div class="testimonial-name">${tt.name}</div>
+              <div class="testimonial-role">${tt.role[currentLang]}</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    /* ==========================================================
+       RENDER: ERASMUS COUNTRIES
+       ========================================================== */
+    function renderErasmusCountries() {
+      const wrap = document.getElementById('erasmusCountries');
+      wrap.innerHTML = ERASMUS_COUNTRIES.map(c => `
+        <span class="country-chip">
+          <span class="country-flag" aria-hidden="true">${c.flag}</span>
+          ${c.name[currentLang]}
+        </span>
+      `).join('');
+    }
+
+    /* ==========================================================
+       RENDER: PARTNERS MARQUEE
+       ========================================================== */
+    function renderPartners() {
+      const track = document.getElementById('marqueeTrack');
+      // Duplicate for seamless loop
+      const items = [...PARTNERS, ...PARTNERS].map(p => `
+        <span class="partner-item">
+          <span aria-hidden="true">${p.country}</span>
+          ${p.name}
+        </span>
+      `).join('');
+      track.innerHTML = items;
+    }
+
+    /* ==========================================================
+       RENDER: 3D GLOBE ORBIT
+       ========================================================== */
+    function renderGlobeOrbit() {
+      const orbit = document.getElementById('orbit');
+      const radius = 48; // % from center
+      const pins = ERASMUS_COUNTRIES.slice(0, 10); // top 10 for visual cleanness
+      const angleStep = 360 / pins.length;
+      orbit.innerHTML = pins.map((c, i) => {
+        const angle = i * angleStep;
+        const rad = (angle * Math.PI) / 180;
+        const x = 50 + radius * Math.cos(rad);
+        const y = 50 + radius * Math.sin(rad);
+        return `
+          <div class="country-pin" style="top:${y}%; left:${x}%;" data-country="${c.code}">
+            <span class="pin-dot" aria-hidden="true"></span>
+            <span class="pin-label">${c.flag} ${c.name[currentLang]}</span>
+          </div>
+        `;
+      }).join('');
+
+      // Counter-rotate the labels so they stay readable
+      const stage = orbit.parentElement;
+      let lastRotation = 0;
+      function updateCounterRot() {
+        const transform = getComputedStyle(orbit).transform;
+        if (transform !== 'none') {
+          const matrix = new DOMMatrix(transform);
+          const angle = Math.atan2(matrix.b, matrix.a) * (180 / Math.PI);
+          lastRotation = angle;
+          orbit.querySelectorAll('.country-pin').forEach(pin => {
+            pin.style.setProperty('--counter-rot', `${-angle}deg`);
+          });
+        }
+        requestAnimationFrame(updateCounterRot);
+      }
+      // Skip rotation tracking if reduced motion
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        requestAnimationFrame(updateCounterRot);
+      }
+
+      // Pause on hover
+      orbit.addEventListener('mouseenter', () => orbit.classList.add('paused'));
+      orbit.addEventListener('mouseleave', () => orbit.classList.remove('paused'));
+    }
+
+    /* ==========================================================
+       3D TILT EFFECT
+       ========================================================== */
+    function attachTilt() {
+      const cards = document.querySelectorAll('.course-card');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (window.matchMedia('(hover: none)').matches) return;
+
+      cards.forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const cx = rect.width / 2;
+          const cy = rect.height / 2;
+          const rotX = ((y - cy) / cy) * -6;
+          const rotY = ((x - cx) / cx) * 6;
+          card.style.transform = `translateY(-6px) perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    /* ==========================================================
+       SCROLL: header + fade-in observer
+       ========================================================== */
+    function initScroll() {
+      const header = document.getElementById('header');
+      const onScroll = () => {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    }
+
+    /* ==========================================================
+       MOBILE MENU
+       ========================================================== */
+    function initMobileMenu() {
+      const toggle = document.getElementById('mobileToggle');
+      const close = document.getElementById('mobileClose');
+      const menu = document.getElementById('mobileMenu');
+      const backdrop = document.getElementById('mobileBackdrop');
+
+      function open() {
+        menu.classList.add('open');
+        backdrop.classList.add('visible');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function shut() {
+        menu.classList.remove('open');
+        backdrop.classList.remove('visible');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      toggle.addEventListener('click', open);
+      close.addEventListener('click', shut);
+      backdrop.addEventListener('click', shut);
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
+    }
+
+    /* ==========================================================
+       FORM
+       ========================================================== */
+    function initForm() {
+      const form = document.getElementById('applyForm');
+      const message = document.getElementById('formMessage');
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        message.className = 'form-message';
+        message.textContent = '';
+
+        const data = Object.fromEntries(new FormData(form));
+        const required = ['firstName', 'lastName', 'email', 'phone', 'course'];
+        const missing = required.filter(k => !data[k] || !String(data[k]).trim());
+
+        if (missing.length || !form.consent.checked) {
+          message.classList.add('error');
+          message.textContent = t('form.error');
+          return;
+        }
+
+        // Em produção: substituir por POST para Formspree/Tally
+        // fetch('https://formspree.io/f/xxxxxx', { method: 'POST', body: new FormData(form) })
+
+        console.log('[FORM] Submission payload:', data);
+        message.classList.add('success');
+        message.textContent = t('form.success');
+        form.reset();
+      });
+    }
+
+    /* ==========================================================
+       LANGUAGE TOGGLE
+       ========================================================== */
+    function initLangToggle() {
+      document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setLanguage(btn.getAttribute('data-lang-btn'));
+        });
+      });
+    }
+
+    /* ==========================================================
+       INIT
+       ========================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCourses();
+      renderFAQ();
+      renderTestimonials();
+      renderErasmusCountries();
+      renderPartners();
+      renderGlobeOrbit();
+      renderCourseSelect();
+      initLangToggle();
+      initScroll();
+      initMobileMenu();
+      initForm();
+
+      // Filter chips
+      document.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCourseFilter = btn.getAttribute('data-filter');
+          renderCourses(currentCourseFilter);
+        });
+      });
+
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
