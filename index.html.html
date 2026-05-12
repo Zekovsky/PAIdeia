@@ -1193,62 +1193,100 @@
     }
 
     /* =========================================================
-       FOOTER
+       FOOTER — compacto e centrado
        ========================================================= */
     .footer {
       background: var(--color-text);
-      color: rgba(255, 255, 255, 0.7);
-      padding: var(--sp-20) 0 var(--sp-8);
+      color: rgba(255, 255, 255, 0.65);
+      padding: var(--sp-12) 0 var(--sp-6);
+      text-align: center;
     }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr repeat(auto-fit, minmax(150px, 1fr));
-      gap: var(--sp-10);
-      margin-bottom: var(--sp-12);
+    .footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-6);
     }
-    .footer h4 {
-      color: white;
-      font-family: var(--font-body);
-      font-size: var(--fs-small);
-      font-weight: var(--fw-semibold);
-      text-transform: uppercase;
-      letter-spacing: var(--tracking-wide);
-      margin-bottom: var(--sp-5);
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-3);
+      max-width: 520px;
     }
-    .footer-brand .logo { color: white; }
-    .footer-brand p {
+    .footer-top .logo { color: white; }
+    .footer-tagline {
       font-size: var(--fs-small);
       line-height: var(--lh-relaxed);
-      max-width: 320px;
-      margin-top: var(--sp-4);
+      color: rgba(255, 255, 255, 0.55);
     }
-    .footer-links { display: flex; flex-direction: column; gap: var(--sp-3); }
-    .footer-links a {
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-2) var(--sp-6);
+    }
+    .footer-nav a {
       font-size: var(--fs-small);
+      font-weight: var(--fw-medium);
+      color: rgba(255, 255, 255, 0.8);
       transition: color var(--dur-fast) var(--ease-out);
     }
-    .footer-links a:hover { color: white; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: var(--sp-6);
+    .footer-nav a:hover { color: var(--color-accent); }
+
+    .footer-contact-line {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: var(--sp-4);
+      justify-content: center;
+      align-items: center;
+      gap: var(--sp-2) var(--sp-4);
       font-size: var(--fs-xs);
+      color: rgba(255, 255, 255, 0.55);
     }
+    .footer-contact-line a {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-1);
+      transition: color var(--dur-fast) var(--ease-out);
+    }
+    .footer-contact-line a:hover { color: white; }
+    .footer-contact-line span:not(.footer-dot) {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-1);
+    }
+    .footer-dot { opacity: 0.4; }
+
     .footer-social {
-      display: flex; gap: var(--sp-3);
+      display: flex;
+      gap: var(--sp-2);
+      justify-content: center;
     }
     .footer-social a {
       width: 36px; height: 36px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.06);
       display: grid; place-items: center;
-      transition: background-color var(--dur-fast) var(--ease-out);
+      color: rgba(255, 255, 255, 0.7);
+      transition: background-color var(--dur-fast) var(--ease-out),
+                  color var(--dur-fast) var(--ease-out);
     }
     .footer-social a:hover { background: var(--color-accent); color: white; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: var(--sp-4);
+      width: 100%;
+      font-size: var(--fs-xs);
+      color: rgba(255, 255, 255, 0.45);
+    }
+    @media (max-width: 600px) {
+      .footer-dot { display: none; }
+      .footer-contact-line {
+        flex-direction: column;
+        gap: var(--sp-2);
+      }
+    }
 
     /* =========================================================
        SCROLL ANIMATIONS
@@ -1297,7 +1335,6 @@
       <nav class="nav" aria-label="Navegação principal">
         <a href="#cursos" data-i18n="nav.courses">Cursos</a>
         <a href="#erasmus" data-i18n="nav.erasmus">Erasmus+</a>
-        <a href="#alumni" data-i18n="nav.alumni">Alumni</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
@@ -1325,7 +1362,6 @@
     </button>
     <a href="#cursos" data-i18n="nav.courses">Cursos</a>
     <a href="#erasmus" data-i18n="nav.erasmus">Erasmus+</a>
-    <a href="#alumni" data-i18n="nav.alumni">Alumni</a>
     <a href="#faq" data-i18n="nav.faq">FAQ</a>
     <a href="#contacto" data-i18n="nav.contact">Contacto</a>
     <a href="#candidatura" class="btn btn-primary" data-i18n="nav.apply">Candidatar</a>
@@ -1491,19 +1527,6 @@
   </section>
 
   <!-- ========================================================
-       TESTIMONIALS
-       ======================================================== -->
-  <section class="section" id="alumni">
-    <div class="container">
-      <div class="section-header center fade-in">
-        <span class="eyebrow"><i data-lucide="users" style="width:14px;height:14px"></i><span data-i18n="alumni.eyebrow">Alumni</span></span>
-        <h2 class="section-title" data-i18n="alumni.title">Histórias reais de quem passou por cá</h2>
-      </div>
-      <div class="testimonials-grid fade-in" id="testimonialsGrid"></div>
-    </div>
-  </section>
-
-  <!-- ========================================================
        PARTNERS MARQUEE
        ======================================================== -->
   <section class="partners">
@@ -1651,53 +1674,39 @@
        ======================================================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <span class="logo-mark">A</span>
-            <span>Academia Atlântica</span>
-          </div>
-          <p data-i18n="footer.about">Escola profissional na Trofa com 17 anos de experiência. Formamos jovens para o mercado de trabalho com componente internacional Erasmus+.</p>
+      <div class="footer-top">
+        <div class="logo">
+          <span class="logo-mark">A</span>
+          <span>Academia Atlântica</span>
         </div>
+        <p class="footer-tagline" data-i18n="footer.about">Escola profissional na Trofa com 17 anos de experiência. Formamos jovens para o mercado de trabalho com componente internacional Erasmus+.</p>
+      </div>
 
-        <div>
-          <h4 data-i18n="footer.school">Escola</h4>
-          <div class="footer-links">
-            <a href="#cursos" data-i18n="footer.courses">Cursos</a>
-            <a href="#erasmus" data-i18n="footer.erasmus">Erasmus+</a>
-            <a href="#alumni" data-i18n="footer.alumni">Alumni</a>
-            <a href="#" data-i18n="footer.team">Equipa</a>
-          </div>
-        </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#cursos" data-i18n="footer.courses">Cursos</a>
+        <a href="#erasmus" data-i18n="footer.erasmus">Erasmus+</a>
+        <a href="#candidatura" data-i18n="footer.admissions">Candidaturas</a>
+        <a href="#faq" data-i18n="footer.faq">FAQ</a>
+        <a href="mailto:geral@academia-atlantica.pt" data-i18n="footer.contact">Contacto</a>
+      </nav>
 
-        <div>
-          <h4 data-i18n="footer.support">Apoio</h4>
-          <div class="footer-links">
-            <a href="#candidatura" data-i18n="footer.admissions">Candidaturas</a>
-            <a href="#faq" data-i18n="footer.faq">FAQ</a>
-            <a href="#" data-i18n="footer.scholarships">Bolsas</a>
-            <a href="#" data-i18n="footer.docs">Documentos</a>
-          </div>
-        </div>
+      <div class="footer-contact-line">
+        <a href="mailto:geral@academia-atlantica.pt"><i data-lucide="mail" style="width:14px;height:14px"></i> geral@academia-atlantica.pt</a>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <a href="tel:+351252000000"><i data-lucide="phone" style="width:14px;height:14px"></i> +351 252 000 000</a>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <span><i data-lucide="map-pin" style="width:14px;height:14px"></i> Rua da Educação 100, Trofa</span>
+      </div>
 
-        <div>
-          <h4 data-i18n="footer.contact">Contacto</h4>
-          <div class="footer-links">
-            <a href="mailto:geral@academia-atlantica.pt">geral@academia-atlantica.pt</a>
-            <a href="tel:+351252000000">+351 252 000 000</a>
-            <a href="#">Rua da Educação, 100<br />4785-000 Trofa</a>
-          </div>
-        </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:16px;height:16px"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:16px;height:16px"></i></a>
+        <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:16px;height:16px"></i></a>
+        <a href="#" aria-label="YouTube"><i data-lucide="youtube" style="width:16px;height:16px"></i></a>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Academia Atlântica. <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:16px;height:16px"></i></a>
-          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:16px;height:16px"></i></a>
-          <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:16px;height:16px"></i></a>
-          <a href="#" aria-label="YouTube"><i data-lucide="youtube" style="width:16px;height:16px"></i></a>
-        </div>
+        <span>© 2026 Academia Atlântica · <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
       </div>
     </div>
   </footer>
@@ -2010,39 +2019,6 @@
         a: {
           pt: 'Estamos na Trofa, a 20 minutos do Porto, com excelentes acessos (A3 + linha de comboio Porto-Braga). Temos transporte escolar próprio para alunos de Famalicão, Santo Tirso, Maia e Vila do Conde.',
           en: 'We are in Trofa, 20 minutes from Porto, with excellent transport links (A3 motorway + Porto-Braga railway line). We provide school transport for students from Famalicão, Santo Tirso, Maia, and Vila do Conde.'
-        }
-      }
-    ];
-
-    /* ==========================================================
-       TESTIMONIALS
-       ========================================================== */
-    const TESTIMONIALS = [
-      {
-        name: 'Beatriz Mendes',
-        role: { pt: 'Tecnologias da Informação · Turma 2023', en: 'IT · Class of 2023' },
-        avatar: 'BM',
-        quote: {
-          pt: 'Fiz Erasmus em Dublin, voltei com proposta de trabalho na mão. Hoje sou dev front-end numa startup portuguesa. A escola mudou-me a vida.',
-          en: 'I did my Erasmus in Dublin and came back with a job offer. Today I\'m a front-end dev at a Portuguese startup. This school changed my life.'
-        }
-      },
-      {
-        name: 'Tiago Costa',
-        role: { pt: 'Turismo · Turma 2022', en: 'Tourism · Class of 2022' },
-        avatar: 'TC',
-        quote: {
-          pt: 'Estagiei em Mallorca e descobri que era isto que queria fazer. Hoje trabalho num resort 5* no Algarve com 22 anos.',
-          en: 'I did my internship in Mallorca and discovered this was what I wanted to do. Today I work at a 5* resort in the Algarve at 22.'
-        }
-      },
-      {
-        name: 'Mariana Silva',
-        role: { pt: 'Design Multimédia · Turma 2024', en: 'Multimedia Design · Class of 2024' },
-        avatar: 'MS',
-        quote: {
-          pt: 'Os professores são profissionais a sério, com experiência no mercado. Saí com portfolio, network e estágio em Amesterdão.',
-          en: 'The teachers are real professionals with market experience. I left with a portfolio, a network, and an internship in Amsterdam.'
         }
       }
     ];
