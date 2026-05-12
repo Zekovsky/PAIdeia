@@ -886,66 +886,6 @@
     .country-flag { font-size: 1.1rem; }
 
     /* =========================================================
-       SECTION: TESTIMONIALS
-       ========================================================= */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--sp-6);
-    }
-    .testimonial {
-      padding: var(--sp-8);
-      background: var(--color-surface);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      transition: transform var(--dur-normal) var(--ease-out),
-                  box-shadow var(--dur-normal) var(--ease-out);
-    }
-    .testimonial:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-    .testimonial-quote {
-      font-family: var(--font-display);
-      font-size: 4rem;
-      line-height: 1;
-      color: var(--color-accent);
-      opacity: 0.4;
-      position: absolute;
-      top: var(--sp-4); right: var(--sp-6);
-    }
-    .testimonial-text {
-      font-size: 1.0625rem;
-      line-height: var(--lh-relaxed);
-      color: var(--color-text-soft);
-      margin-bottom: var(--sp-6);
-      position: relative;
-      z-index: 2;
-    }
-    .testimonial-author {
-      display: flex; align-items: center; gap: var(--sp-3);
-    }
-    .testimonial-avatar {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: var(--gradient-primary);
-      color: var(--color-text-inverse);
-      display: grid; place-items: center;
-      font-weight: var(--fw-semibold);
-      font-family: var(--font-display);
-    }
-    .testimonial-name {
-      font-weight: var(--fw-semibold);
-      font-size: var(--fs-body);
-      color: var(--color-text);
-    }
-    .testimonial-role {
-      font-size: var(--fs-small);
-      color: var(--color-muted);
-    }
-
-    /* =========================================================
        SECTION: TRUST / CERTIFICATIONS
        ========================================================= */
     .trust {
@@ -1723,7 +1663,6 @@
         'brand': 'Academia Atlântica',
         'nav.courses': 'Cursos',
         'nav.erasmus': 'Erasmus+',
-        'nav.alumni': 'Alumni',
         'nav.faq': 'FAQ',
         'nav.contact': 'Contacto',
         'nav.apply': 'Candidatar',
@@ -1767,9 +1706,6 @@
         'erasmus.kpi.3': 'duração média do estágio',
         'erasmus.kpi.4': 'bolsa mensal média',
 
-        'alumni.eyebrow': 'Alumni',
-        'alumni.title': 'Histórias reais de quem passou por cá',
-
         'partners.label': 'Universidades e empresas parceiras',
 
         'trust.1': 'Acreditação oficial',
@@ -1803,7 +1739,6 @@
         'footer.school': 'Escola',
         'footer.courses': 'Cursos',
         'footer.erasmus': 'Erasmus+',
-        'footer.alumni': 'Alumni',
         'footer.team': 'Equipa',
         'footer.support': 'Apoio',
         'footer.admissions': 'Candidaturas',
@@ -1817,7 +1752,6 @@
         'brand': 'Academia Atlântica',
         'nav.courses': 'Programs',
         'nav.erasmus': 'Erasmus+',
-        'nav.alumni': 'Alumni',
         'nav.faq': 'FAQ',
         'nav.contact': 'Contact',
         'nav.apply': 'Apply now',
@@ -1861,9 +1795,6 @@
         'erasmus.kpi.3': 'average placement length',
         'erasmus.kpi.4': 'average monthly grant',
 
-        'alumni.eyebrow': 'Alumni',
-        'alumni.title': 'Real stories from real graduates',
-
         'partners.label': 'Partner universities and companies',
 
         'trust.1': 'Official accreditation',
@@ -1897,7 +1828,6 @@
         'footer.school': 'School',
         'footer.courses': 'Programs',
         'footer.erasmus': 'Erasmus+',
-        'footer.alumni': 'Alumni',
         'footer.team': 'Team',
         'footer.support': 'Support',
         'footer.admissions': 'Admissions',
@@ -2081,7 +2011,6 @@
       // Re-render dynamic content
       renderCourses(currentCourseFilter);
       renderFAQ();
-      renderTestimonials();
       renderErasmusCountries();
       renderCourseSelect();
     }
@@ -2156,26 +2085,6 @@
           btn.setAttribute('aria-expanded', !isOpen);
         });
       });
-    }
-
-    /* ==========================================================
-       RENDER: TESTIMONIALS
-       ========================================================== */
-    function renderTestimonials() {
-      const grid = document.getElementById('testimonialsGrid');
-      grid.innerHTML = TESTIMONIALS.map(tt => `
-        <article class="testimonial">
-          <div class="testimonial-quote" aria-hidden="true">"</div>
-          <p class="testimonial-text">${tt.quote[currentLang]}</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar" aria-hidden="true">${tt.avatar}</div>
-            <div>
-              <div class="testimonial-name">${tt.name}</div>
-              <div class="testimonial-role">${tt.role[currentLang]}</div>
-            </div>
-          </div>
-        </article>
-      `).join('');
     }
 
     /* ==========================================================
@@ -2376,7 +2285,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       renderCourses();
       renderFAQ();
-      renderTestimonials();
       renderErasmusCountries();
       renderPartners();
       renderGlobeOrbit();
